@@ -8,7 +8,7 @@ function Image() {
         const newImage = {
             id: Date.now(), // Унікальний ID
             width: 450,
-            src: "/images/barcelona.jpg",
+            src: `${process.env.PUBLIC_URL}/images/barcelona.jpg`,
             link: "https://www.barcelona.cat/en", // Силка, на яку веде зображення
         };
         setImages((prevImages) => [...prevImages, newImage]);
@@ -42,7 +42,7 @@ function Image() {
             <div className="image-container">
                 <a href="https://www.barcelona.cat/en" target="_blank" rel="noopener noreferrer">
                     <img
-                        src="/images/barcelona.jpg"
+                        src={`${process.env.PUBLIC_URL}/images/barcelona.jpg`}
                         alt="Барселона"
                         width={450}
                         className="image"
